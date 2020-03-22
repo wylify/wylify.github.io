@@ -3,6 +3,7 @@ layout: posts
 title: "favorite anime"
 date: 2020-03-17
 description:
+author_profile: true
 header:
   image: /assets/img/2020/03/anime.jpg
 author: Filip Cernak

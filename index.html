@@ -1,6 +1,40 @@
 ---
 layout: splash
-author_profile: true
+# author_profile: true
+title: "Hey, it's Filip!"
 header:
-  image: /assets/img/banner/banner-4s.jpg
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/img/banner/banner-4s.jpg
+  actions:
+    - label: "visit my blog"
+      url: /blog/
+excerpt:  ""
+
+intro:
+  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+feature_row:
+  - image_path: /assets/img/banner/banner-2s.jpg
+    alt: "placeholder image 1"
+    title: "blog."
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    url: /blog/
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+  - image_path: /assets/img/banner/banner-3s.jpg
+    alt: "placeholder image 2"
+    title: "photography."
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    url: /portfolio/
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+  - image_path: /assets/img/banner/banner-4s.jpg
+    title: "cv."
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    url: /cv/
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
 ---
+{% include feature_row id="intro" type="center" %}
+
+{% include feature_row %}

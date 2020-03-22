@@ -3,6 +3,7 @@ layout: posts
 title: "hello world!"
 date: 2020-03-15
 description:
+author_profile: true
 header:
   image: /assets/img/2020/03/filip-about.jpg
 author: Filip Cernak

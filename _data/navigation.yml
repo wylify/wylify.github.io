@@ -1,6 +1,10 @@
 # main links
 main:
-  - title: "Blog"
+  - title: "about."
+    url: /about/
+  - title: "portfolio."
+    url: /portfolio/  
+  - title: "blog."
     url: /blog/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
