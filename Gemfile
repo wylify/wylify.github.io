@@ -17,6 +17,7 @@ gem "github-pages", group: :jekyll_plugins
 gem "minimal-mistakes-jekyll"
 gem 'wdm', '>= 0.1.0'
 gem 'tzinfo-data'
+gem 'jekyll-paginate'
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"
