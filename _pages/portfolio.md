@@ -11,8 +11,8 @@ I started taking photos around the year 2012, running around town with my phone,
 
 <div class="row">
   <div class="column">
+    <a href="/assets/img/portfolio/portfolio-019.jpg"><img src="/assets/img/portfolio/portfolio-019.jpg"></a>
     <a href="/assets/img/portfolio/portfolio-001.jpg"><img src="/assets/img/portfolio/portfolio-001.jpg"></a>
-    <a href="/assets/img/portfolio/portfolio-002.jpg"><img src="/assets/img/portfolio/portfolio-002.jpg"></a>
     <a href="/assets/img/portfolio/portfolio-003.jpg"><img src="/assets/img/portfolio/portfolio-003.jpg"></a>
   </div>
   <div class="column">
@@ -26,9 +26,9 @@ I started taking photos around the year 2012, running around town with my phone,
     <a href="/assets/img/portfolio/portfolio-015.jpg"><img src="/assets/img/portfolio/portfolio-015.jpg"></a>
   </div>
   <div class="column">
-    <a href="/assets/img/portfolio/portfolio-019.jpg"><img src="/assets/img/portfolio/portfolio-019.jpg"></a>
-    <a href="/assets/img/portfolio/portfolio-020.jpg"><img src="/assets/img/portfolio/portfolio-020.jpg"></a>
+    <a href="/assets/img/portfolio/portfolio-002.jpg"><img src="/assets/img/portfolio/portfolio-002.jpg"></a>
     <a href="/assets/img/portfolio/portfolio-021.jpg"><img src="/assets/img/portfolio/portfolio-021.jpg"></a>
+    <a href="/assets/img/portfolio/portfolio-023.jpg"><img src="/assets/img/portfolio/portfolio-023.jpg"></a>
   </div>
 </div>
 
@@ -45,18 +45,18 @@ Taking photos for me is a way how to communicate my perceptions with the rest of
     <a href="/assets/img/portfolio/portfolio-006.jpg"><img src="/assets/img/portfolio/portfolio-006.jpg"></a>
   </div>
   <div class="column">
-    <a href="/assets/img/portfolio/portfolio-010.jpg"><img src="/assets/img/portfolio/portfolio-010.jpg"></a>
     <a href="/assets/img/portfolio/portfolio-011.jpg"><img src="/assets/img/portfolio/portfolio-011.jpg"></a>
-    <a href="/assets/img/portfolio/portfolio-012.jpg"><img src="/assets/img/portfolio/portfolio-012.jpg"></a>
+    <a href="/assets/img/portfolio/portfolio-016.jpg"><img src="/assets/img/portfolio/portfolio-016.jpg"></a>
+    <a href="/assets/img/portfolio/portfolio-010.jpg"><img src="/assets/img/portfolio/portfolio-010.jpg"></a>
   </div>
   <div class="column">
-    <a href="/assets/img/portfolio/portfolio-016.jpg"><img src="/assets/img/portfolio/portfolio-016.jpg"></a>
     <a href="/assets/img/portfolio/portfolio-017.jpg"><img src="/assets/img/portfolio/portfolio-017.jpg"></a>
+    <a href="/assets/img/portfolio/portfolio-012.jpg"><img src="/assets/img/portfolio/portfolio-012.jpg"></a>
     <a href="/assets/img/portfolio/portfolio-018.jpg"><img src="/assets/img/portfolio/portfolio-018.jpg"></a>
   </div>
   <div class="column">
     <a href="/assets/img/portfolio/portfolio-022.jpg"><img src="/assets/img/portfolio/portfolio-022.jpg"></a>
-    <a href="/assets/img/portfolio/portfolio-023.jpg"><img src="/assets/img/portfolio/portfolio-023.jpg"></a>
+    <a href="/assets/img/portfolio/portfolio-020.jpg"><img src="/assets/img/portfolio/portfolio-020.jpg"></a>
     <a href="/assets/img/portfolio/portfolio-024.jpg"><img src="/assets/img/portfolio/portfolio-024.jpg"></a>
   </div>
 </div>
