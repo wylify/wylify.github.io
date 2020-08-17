@@ -95,13 +95,13 @@ analytics:
 author:
   name             : "Filip Cernak"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "MSc. Management of Innovation graduate, creative, traveler, interested in start-ups, tech, and ecology. Currently looking for a job in business development, marketing, or process management."
+  location         : "Europe"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:website+korabrandxyz@gmail.com
+      url: mailto:korabrandxyz+website@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -139,6 +139,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/wylify"
+    - label: "Privacy Policy"
+      icon: "fas fa-user-secret"
+      url: "/privacy/"
 
 
 # Reading Files
