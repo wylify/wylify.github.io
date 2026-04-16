@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #050505;
+  --color-off-white: #f0f4f8;
+  --color-brutal-red: #ff0033;
+  --color-brutal-grey: #1a1a1a;
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian text-white selection:bg-brutal-red selection:text-white font-sans overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display uppercase tracking-tight;
+  }
+}
+
+@layer utilities {
+  .brutal-border {
+    @apply border border-white/10;
+  }
+
+  .grain {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='discrete' tableValues='0 1'/%3E%3CfeFuncG type='discrete' tableValues='0 1'/%3E%3CfeFuncB type='discrete' tableValues='0 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 5;
+    mix-blend-mode: overlay;
+  }
+
+  .animate-noise {
+    animation: noise-anim 0.2s steps(4) infinite;
+  }
+
+  @keyframes noise-anim {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-1%, -1%); }
+    20% { transform: translate(-2%, 1%); }
+    30% { transform: translate(1%, -2%); }
+    40% { transform: translate(-1%, 3%); }
+    50% { transform: translate(-2%, 1%); }
+    60% { transform: translate(3%, 0); }
+    70% { transform: translate(0, 2%); }
+    80% { transform: translate(-3%, 0); }
+    90% { transform: translate(2%, 1%); }
+    100% { transform: translate(1%, 0); }
+  }
+
+  .vignette-grain {
+    background: radial-gradient(circle at center, var(--color-off-white) 0%, var(--color-off-white) 15%, #000 100%);
+  }
+
+  .dense-grid {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(128, 128, 128, 0.4) 0.5px, transparent 0.5px),
+      linear-gradient(to bottom, rgba(128, 128, 128, 0.4) 0.5px, transparent 0.5px);
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+    color: transparent;
+  }
+
+  .glass-blur {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
