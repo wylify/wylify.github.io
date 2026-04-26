@@ -4,15 +4,15 @@ import { ChevronDown, ArrowRight, X, ChevronLeft, ChevronRight, ArrowUpRight } f
 import { Link } from "react-router-dom";
 
 const heroImages = [
-  { url: "https://picsum.photos/seed/hero1/1200/800", title: "Digital Innovation" },
-  { url: "https://picsum.photos/seed/hero2/1200/800", title: "Creative Powerhouse" },
-  { url: "https://picsum.photos/seed/hero3/1200/800", title: "Future Vision" },
-  { url: "https://picsum.photos/seed/hero4/1200/800", title: "Minimalist Design" },
-  { url: "https://picsum.photos/seed/hero5/1200/800", title: "Urban Geometry" },
+  { url: "https://res.cloudinary.com/dwdjqhjs4/image/upload/v1777184682/2026-02-20_15-09-58_u2ye8z.jpg", title: "Photography" },
+  { url: "https://picsum.photos/seed/hero1/1200/800", title: "Travels" },
+  { url: "https://picsum.photos/seed/hero2/1200/800", title: "Projects" },
+  { url: "https://picsum.photos/seed/hero3/1200/800", title: "Journal" },
+  { url: "https://picsum.photos/seed/hero4/1200/800", title: "Experiments" },
 ];
 
 const galleryImages = [
-  { url: "https://picsum.photos/seed/gal1/800/800", title: "Abstract Form" },
+  { url: "https://res.cloudinary.com/dwdjqhjs4/image/upload/v1777184682/2026-02-20_15-09-58_u2ye8z.jpg", title: "Shibuya, 2026" },
   { url: "https://picsum.photos/seed/gal2/800/800", title: "Urban Geometry" },
   { url: "https://picsum.photos/seed/gal3/800/800", title: "Light Study" },
   { url: "https://picsum.photos/seed/gal4/800/800", title: "Minimalist Space" },
@@ -20,7 +20,7 @@ const galleryImages = [
   { url: "https://picsum.photos/seed/gal6/800/800", title: "Void Exploration" },
 ];
 
-const blogPosts = [
+const journalPosts = [
   { id: "post-1", title: "The Ethics of Visual Weight", date: "Oct 24, 2023" },
   { id: "post-2", title: "Glassmorphism in 2024", date: "Sep 12, 2023" },
   { id: "post-3", title: "Brutalist Design Systems", date: "Aug 05, 2023" },
@@ -36,11 +36,11 @@ const CONFIG = {
   bgColor:         '#ffffff',  // background fill colour
   bgAlpha:         0,        // background opacity: 0 (transparent) → 1 (solid)
   lineColor:       '#000000',  // grid line colour
-  lineWidth:       1,          // grid line thickness in px (CSS pixels)
+  lineWidth:       0.5,          // grid line thickness in px (CSS pixels)
   lineAlpha:       1,          // grid line opacity: 0 → 1
 
   /* Layout */
-  cellSize:        40,         // px between grid lines — smaller = denser grid
+  cellSize:        20,         // px between grid lines — smaller = denser grid
 
   /* Distortion */
   distortRadius:   260,        // px — radius of the warp zone around the cursor
@@ -222,6 +222,32 @@ function HeroImage({ img, progress, centerPoint, step }: { img: any, progress: a
 export default function Home() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const handleNext = useCallback(() => {
+    if (lightboxIndex !== null) {
+      setLightboxIndex((lightboxIndex + 1) % galleryImages.length);
+    }
+  }, [lightboxIndex]);
+
+  const handlePrev = useCallback(() => {
+    if (lightboxIndex !== null) {
+      setLightboxIndex((lightboxIndex - 1 + galleryImages.length) % galleryImages.length);
+    }
+  }, [lightboxIndex]);
+
+  const handleClose = useCallback(() => setLightboxIndex(null), []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (lightboxIndex === null) return;
+      if (e.key === "ArrowRight") handleNext();
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "Escape") handleClose();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxIndex, handleNext, handlePrev, handleClose]);
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -293,16 +319,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-12">
             <h2 className="text-6xl md:text-8xl font-display tracking-tighter leading-none">
-              WE BUILD <br />
-              <span className="text-outline">DIGITAL</span> <br />
-              FUTURE.
+              Filip <br />
+              <span className="text-outline">Cernak</span> <br />
+              Cernak
             </h2>
             <div className="max-w-md space-y-6">
               <p className="text-xl text-white/60 leading-relaxed">
-                A minimalist approach to digital architecture, focused on clarity and the interplay between light and structure.
+                A minimalist space designed to showcase digital media, record memories, share passion for photography and art.
               </p>
               <p className="text-sm text-white/40 leading-relaxed">
-                Our studio operates at the intersection of design and technology, crafting experiences that are as functional as they are beautiful.
+                Designing and creating a personal space, outside of large platforms and with full control over content.
               </p>
               <Link to="/about" className="inline-flex items-center gap-4 text-sm font-mono uppercase tracking-widest group">
                 Learn More <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
@@ -356,23 +382,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Blog Section */}
+      {/* Journal Section */}
       <section className="px-6 md:px-12 py-20 border-t border-white/10 bg-white/2">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-20">
           <div className="space-y-8">
             <h2 className="text-5xl font-display tracking-tighter">JOURNAL.</h2>
             <p className="text-sm text-white/40 leading-relaxed">
-              Thoughts on design, technology, and the art of minimalism. Updated weekly.
+              Exploration and documenting of photography, design, technology, and travels. Updated occasionally.
             </p>
-            <Link to="/blog" className="inline-flex items-center gap-4 text-sm font-mono uppercase tracking-widest group text-brutal-red">
+            <Link to="/journal" className="inline-flex items-center gap-4 text-sm font-mono uppercase tracking-widest group text-brutal-red">
               Read More <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
             </Link>
           </div>
           <div className="lg:col-span-2 divide-y divide-white/10">
-            {blogPosts.map((post) => (
+            {journalPosts.map((post) => (
               <Link 
                 key={post.id} 
-                to={`/blog/${post.id}`}
+                to={`/journal/${post.id}`}
                 className="flex items-center justify-between py-8 group"
               >
                 <div className="space-y-2">
@@ -405,14 +431,14 @@ export default function Home() {
               
               <button 
                 className="absolute top-4 right-4 md:top-10 md:right-10 text-white hover:text-brutal-red transition-colors z-[110] bg-black/20 rounded-full p-2"
-                onClick={() => setLightboxIndex(null)}
+                onClick={handleClose}
               >
                 <X size={32} />
               </button>
               <div className="absolute top-1/2 -left-12 -translate-y-1/2">
                 <button 
                   className="p-4 hover:text-brutal-red transition-colors"
-                  onClick={() => setLightboxIndex((lightboxIndex - 1 + galleryImages.length) % galleryImages.length)}
+                  onClick={handlePrev}
                 >
                   <ChevronLeft size={40} />
                 </button>
@@ -420,7 +446,7 @@ export default function Home() {
               <div className="absolute top-1/2 -right-12 -translate-y-1/2">
                 <button 
                   className="p-4 hover:text-brutal-red transition-colors"
-                  onClick={() => setLightboxIndex((lightboxIndex + 1) % galleryImages.length)}
+                  onClick={handleNext}
                 >
                   <ChevronRight size={40} />
                 </button>

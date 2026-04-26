@@ -1,13 +1,14 @@
 import GlassCard from "../components/GlassCard";
-import { Github, Twitter, Instagram, Linkedin, Mail, Globe, ArrowUpRight } from "lucide-react";
+import { Github, Twitter, Instagram, Linkedin, Mail, Globe, ArrowUpRight, AudioWaveform } from "lucide-react";
 
 const links = [
   { label: "Official Website", icon: Globe, url: "#" },
   { label: "GitHub Portfolio", icon: Github, url: "#" },
   { label: "Twitter / X", icon: Twitter, url: "#" },
-  { label: "Instagram", icon: Instagram, url: "#" },
+  { label: "Instagram", icon: Instagram, url: "https://instagram.com/wylify" },
   { label: "LinkedIn", icon: Linkedin, url: "#" },
   { label: "Contact Me", icon: Mail, url: "#" },
+  { label: "Soundcloud", icon: AudioWaveform, url: "https://soundcloud.com/wylify" },
 ];
 
 export default function Links() {
@@ -54,7 +55,7 @@ export default function Links() {
 
         <div className="text-center">
           <p className="text-[10px] font-mono text-white/10 uppercase tracking-[0.3em]">
-            © 2024 STUDIO. ALL RIGHTS RESERVED.
+            © 2026 Filip Cernak. ALL RIGHTS RESERVED.
           </p>
         </div>
       </div>

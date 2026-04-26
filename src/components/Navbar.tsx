@@ -16,12 +16,12 @@ export default function Navbar() {
   const navLinks = [
     { path: "/about", label: "About" },
     { path: "/gallery", label: "Gallery" },
-    { path: "/blog", label: "Blog" },
+    { path: "/journal", label: "Journal" },
     { path: "/links", label: "Links" }
   ];
 
   return (
-    <header className="fixed top-[0.7rem] left-[0.7rem] right-[0.7rem] z-50 pointer-events-none">
+    <header className="fixed top-[1rem] left-[1rem] right-[1rem] z-50 pointer-events-none">
       <div className="flex h-16 md:h-20 items-stretch bg-obsidian border-b border-white/10 pointer-events-auto">
         {/* Logo Section */}
         <div className="flex items-center px-6 border-r border-white/10">

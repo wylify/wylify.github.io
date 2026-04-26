@@ -1,13 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, ArrowUpRight } from "lucide-react";
 
-export default function BlogPost() {
+export default function JournalPost() {
   const { id } = useParams();
 
   return (
     <div className="px-6 md:px-12 pt-32 pb-20 space-y-12">
       <div className="max-w-4xl mx-auto space-y-12">
-        <Link to="/blog" className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-white/40 hover:text-white transition-colors">
+        <Link to="/journal" className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-white/40 hover:text-white transition-colors">
           <ArrowLeft size={14} /> Back to Journal
         </Link>
 
@@ -24,7 +24,7 @@ export default function BlogPost() {
 
           <div className="aspect-video overflow-hidden border border-white/10">
             <img 
-              src="https://picsum.photos/seed/blog-hero/1200/800" 
+              src="https://picsum.photos/seed/journal-hero/1200/800" 
               alt="Hero" 
               className="w-full h-full object-cover grayscale"
               referrerPolicy="no-referrer"

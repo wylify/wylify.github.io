@@ -24,7 +24,7 @@ export default function Layout({ children }: LayoutProps) {
         {/* Top Border - Travel with scroll while changing color */}
         <motion.div 
           style={{ backgroundColor: dynamicColor }}
-          className="h-[0.7rem] w-full shrink-0" 
+          className="h-[0.5rem] w-full shrink-0" 
         />
         
         <div className="flex-1 flex justify-between">
@@ -33,14 +33,14 @@ export default function Layout({ children }: LayoutProps) {
             style={{ 
               background: useTransform(dynamicColor, (c) => `linear-gradient(to bottom, ${c}, #050505)`)
             }}
-            className="w-[0.7rem] h-full" 
+            className="w-[0.5rem] h-full" 
           />
           {/* Right Border */}
           <motion.div 
             style={{ 
               background: useTransform(dynamicColor, (c) => `linear-gradient(to bottom, ${c}, #050505)`)
             }}
-            className="w-[0.7rem] h-full" 
+            className="w-[0.5rem] h-full" 
           />
         </div>
       </div>
@@ -49,9 +49,6 @@ export default function Layout({ children }: LayoutProps) {
       <main className="flex-1 relative">
         {children}
       </main>
-      
-      {/* Bottom Border - Only visible at bottom of page (relative to content) */}
-      <div className="h-[0.7rem] w-full bg-black shrink-0 relative z-[101]" />
       
       <Footer />
     </div>

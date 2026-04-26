@@ -39,7 +39,7 @@ const posts = [
   },
 ];
 
-export default function BlogIndex() {
+export default function JournalIndex() {
   return (
     <div className="px-6 md:px-12 pt-32 pb-20 space-y-20">
       <div className="max-w-7xl mx-auto space-y-4">
@@ -51,7 +51,7 @@ export default function BlogIndex() {
         {posts.map((post) => (
           <Link 
             key={post.id} 
-            to={`/blog/${post.id}`}
+            to={`/journal/${post.id}`}
             className="flex flex-col md:flex-row md:items-center justify-between py-12 group gap-8"
           >
             <div className="space-y-4 max-w-2xl">
