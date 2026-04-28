@@ -9,6 +9,7 @@ import JournalPost from "./pages/JournalPost";
 import Links from "./pages/Links";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import NotFound from "./pages/NotFound";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/links" element={<Links />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </Router>
